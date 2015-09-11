@@ -4,7 +4,7 @@
 
 [How to Contribute](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/CONTRIBUTING.md)
 
-#Test Suites
+# Documentation
 All the documents of the test suites contained in this repo are listed below:
 
 ## MS-SMB
