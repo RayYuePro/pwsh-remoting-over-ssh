@@ -17,6 +17,11 @@ All the documents of the test suites contained in this repo are listed below:
 
 [User Guide] (https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/TestSuites/FileServer/docs/FileServerUserGuide.md)
 
+## RDP
+[Test Design Spec] (https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/docs/RDP_Overview_ClientTestDesignSpecification.md)
+
+[User Guide] (https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/docs/RDP_ClientUserGuide.md)
+
 # References
 
 [Protocol Test Framework (PTF)](https://github.com/microsoft/protocoltestframework): PTF implements the fundamentals to support Protocol Test Suite.
