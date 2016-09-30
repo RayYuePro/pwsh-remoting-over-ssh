@@ -22,6 +22,10 @@ All the documents of the test suites contained in this repo are listed below:
 
 [User Guide] (https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/docs/RDP_ClientUserGuide.md)
 
+## Downloads of pre-compiled and non-open source test suites
+
+[Download .msi of all released testuites] (https://github.com/Microsoft/WindowsProtocolTestSuites/releases)
+
 # References
 
 [Protocol Test Framework (PTF)](https://github.com/microsoft/protocoltestframework): PTF implements the fundamentals to support Protocol Test Suite.
