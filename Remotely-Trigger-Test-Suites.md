@@ -24,8 +24,8 @@ This guide will show you how to trigger Windows Protocol Test Suites from a Linu
 
 ## Prerequisites
 
-1. A Windows machine which has Windows Protocol Test Suites and Protocol Test Manager installed.
-2. Save a test profile from Protocol Test Manager.
+1. A Windows machine with Protocol Test Manager, Windows Protocol Test Suites and all its prerequisites installed.
+2. A test profile saved from Protocol Test Manager.
 
 ## Testing Environment
 
@@ -52,8 +52,6 @@ Download msi installer from PowerShell Core [GitHub release page](https://github
 You may refer to the [official guide](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell-core-on-linux?view=powershell-6) on how to install PowerShell Core in your distribution.
 
 ## Setup SSH Connection
-
-PowerShell use SSH 
 
 ### Install OpenSSH Server
 
