@@ -17,10 +17,10 @@ All the documents of the test suites contained in this repo are listed below:
 
 [User Guide](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/TestSuites/FileServer/docs/FileServerUserGuide.md)
 
-## RDP
-[Test Design Spec](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/docs/RDP_Overview_ClientTestDesignSpecification.md)
+## RDP Client
+[Test Design Spec](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/Client/docs/RDP_Overview_ClientTestDesignSpecification.md)
 
-[User Guide](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/docs/RDP_ClientUserGuide.md)
+[User Guide](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/staging/TestSuites/RDP/Client/docs/RDP_ClientUserGuide.md)
 
 ## Downloads of pre-compiled and non-open source test suites
 
