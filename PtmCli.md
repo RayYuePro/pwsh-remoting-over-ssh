@@ -17,6 +17,8 @@ PtmCli.exe <-p|-profile profileName>
 
 Specifies the path of the test profile to run.
 
+To get a valid profile. You need to export one from PTM GUI. See [Export Test Profile](#export-test-profile) section.
+
 ### -s|-selected
 
 When specified, only the selected test cases will run. Otherwise, all the test cases in the profile will run.
@@ -56,6 +58,12 @@ Specifies the separator used in the report file.
 Valid values are: `space`, `comma`.
 
 Default value is `space`.
+
+## Export Test Profile
+
+As the below image shown, when using PTM to run test cases, in the last screen, click **Export / Import** at the right bottom of the test case list, then click **Save Profile ...**. Then you can get a valid PTM profile to use with PtmCli.
+
+![Save a profile in PTM](./images/save-profile.png)
 
 ## Modify Test Profile
 
