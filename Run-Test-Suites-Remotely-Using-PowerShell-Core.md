@@ -20,7 +20,7 @@
 
 Windows Protocol Test Suites currently only runs on Windows. You can use it interactively as a GUI application. It also can be run via CLI for auto testing purpose.
 
-This guide will show you how to trigger Windows Protocol Test Suites from a Linux machine. So you can integrate Windows Protocol Test Suites into your own testing environment for automation.
+This guide will show you how to run Windows Protocol Test Suites remotely from a Linux machine through PowerShell Core. So you can integrate Windows Protocol Test Suites into your own testing environment for automation.
 
 ## Prerequisites
 
