@@ -5,59 +5,51 @@ Protocol Test Manager has a command line interface for you to use in automation.
 ## Syntax
 
 ```
-PtmCli.exe <-p|-profile profileName>
-           [-s|-selected] [-r|-report reportFile]
-           [-categories categories] [-outcome pass,fail,inconclusive,notrun]
-           [-sortby name|outcome] [-separator comma|space]
+PtmCli.exe <-p|--profile profileName>
+           [-s|--selected] [--categories categories]
+           [-r|--report reportFile] [--outcome pass,fail,inconclusive]
+           [-f|--format format]
 ```
 
 ## Parameters
 
-### -p|-profile profileName
+### -p|--profile profileName
 
 Specifies the path of the test profile to run.
 
 To get a valid profile. You need to export one from PTM GUI. See [Export Test Profile](#export-test-profile) section.
 
-### -s|-selected
+### -s|--selected
 
-When specified, only the selected test cases will run. Otherwise, all the test cases in the profile will run.
+When specified, only the selected test cases will be executed. Otherwise, all the test cases in the profile will be executed.
 
-### -r|-report reportFile
-
-Specifies the result file which will be written to. If not specified, test results will be written to stdout.
-
-### -categories categories
+### --categories categories
 
 Specifies the categories of test cases to run. This parameter overrides the test cases in profile.
 
-Value should be separated by comma without space.
+Value should be separated by comma or space.
 
-### -outcome outcome
+### -r|--report reportFile
+
+Specifies the result file which will be written to. If not specified, test results will be written to stdout.
+
+### --outcome outcome
 
 Specifies the outcome of the test cases to be included in the report file.
 
-Value should be separated by comma without space.
+Value should be separated by comma or space.
 
-Valid values are: `pass`, `fail`, `inconclusive`, `notrun`.
+Valid values are: `pass`, `fail`, `inconclusive`.
 
-Default value is `pass,fail`.
+Default value is `pass,fail,inconclusive`.
 
-### -sortby
+### -f|--format format
 
-Specifies the way to sort the test cases in the report.
+Specifies the report format.
 
-Valid values are: `name`, `outcome`.
+Valid values are: `plain`, `json`, `xunit`.
 
-Default value is `name`.
-
-### -separator
-
-Specifies the separator used in the report file.
-
-Valid values are: `space`, `comma`.
-
-Default value is `space`.
+Default value is `plain`.
 
 ## Export Test Profile
 
