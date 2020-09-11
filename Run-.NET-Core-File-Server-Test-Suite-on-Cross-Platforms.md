@@ -41,7 +41,7 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 1. > Create 3  shadow copies on the volume which contains the share SMBBasic.
 
 * **Auth scenario configuration**
-1. > ** Share permission:**
+** ** Share permission:**
 1. > A share named ”AzShare” was created with permission: 
 ** NTFS Permission:         Allow Everyone
 ** Share Permission: Allow Domain Admins
