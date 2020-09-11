@@ -33,28 +33,28 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
     *  Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
     *  Create an encrypted share “SMBEncrypted” for encryption feature
     *  Create a symbolic link ”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic”
-* 1. Create a sub folder “Sub” under basic share “SMBBasic“
-* 1. Create a symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic)
-* 1. Create a share “ShareForceLevel2” and set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags
-* 1. Create a share “SameWithSMBBasic” pointing to the same local path of basic share (e.g. SMBBasic)
-* 1. Create a share “DifferentFromSMBBasic” pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
-* 1. Create a share SMBReFSShare on ReFS volume 
-* 1. Create 3  shadow copies on the volume which contains the share SMBBasic.
+    *  Create a sub folder “Sub” under basic share “SMBBasic“
+    *  Create a symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic)
+    *  Create a share “ShareForceLevel2” and set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags
+    *  Create a share “SameWithSMBBasic” pointing to the same local path of basic share (e.g. SMBBasic)
+    *  Create a share “DifferentFromSMBBasic” pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
+    *  Create a share SMBReFSShare on ReFS volume 
+    *  Create 3  shadow copies on the volume which contains the share SMBBasic.
 
 * **Auth scenario configuration**
-1. > Share permission:
-1. > >   A share named ”AzShare” was created with permission: 
+    *  Share permission:
+    *      *  A share named ”AzShare” was created with permission: 
 > > > ** NTFS Permission:         Allow Everyone
 > > > ** Share Permission: Allow Domain Admins
-1. > Folder Permission:
+    *   Folder Permission:
 > > A share named “AzFolder” was created with permission:
 > > > * NTFS Permission:         Allow Domain Admins
 > > > * Share Permission: Allow Everyone
-1. > File Permission:
+    *   File Permission:
 > > A share named “AzFile” was created with permission:
 > > > NTFS Permission:         Allow Domain Admins
 > > > Share Permission: Allow Everyone
-1. > Claim-Based Access Control (CBAC):
+    *   Claim-Based Access Control (CBAC):
 > > A share named “AzCBAC” was created with permission:
 > > > NTFS Permission:      Allow Everyone
 > > > Share Permission: Allow Everyone
