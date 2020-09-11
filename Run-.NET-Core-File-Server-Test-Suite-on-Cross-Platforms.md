@@ -29,16 +29,16 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 1. Deploy the test scenario related environment configuration including:
 
 * **SMB2 scenario configuration**
-1. 1. Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
-1. 1. Create an encrypted share “SMBEncrypted” for encryption feature
-1. 1. Create a symbolic link ”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic”
-1. 1. Create a sub folder “Sub” under basic share “SMBBasic“
-1. 1. Create a symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic)
-1. 1. Create a share “ShareForceLevel2” and set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags
-1. 1. Create a share “SameWithSMBBasic” pointing to the same local path of basic share (e.g. SMBBasic)
-1. 1. Create a share “DifferentFromSMBBasic” pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
-1. 1. Create a share SMBReFSShare on ReFS volume 
-1. 1. Create 3  shadow copies on the volume which contains the share SMBBasic.
+* 1. Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
+* 1. Create an encrypted share “SMBEncrypted” for encryption feature
+* 1. Create a symbolic link ”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic”
+* 1. Create a sub folder “Sub” under basic share “SMBBasic“
+* 1. Create a symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic)
+* 1. Create a share “ShareForceLevel2” and set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags
+* 1. Create a share “SameWithSMBBasic” pointing to the same local path of basic share (e.g. SMBBasic)
+* 1. Create a share “DifferentFromSMBBasic” pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
+* 1. Create a share SMBReFSShare on ReFS volume 
+* 1. Create 3  shadow copies on the volume which contains the share SMBBasic.
 
 * **Auth scenario configuration**
 1. > Share permission:
