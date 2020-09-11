@@ -29,7 +29,7 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 1. Deploy the test scenario related environment configuration including:
 
 * **SMB2 scenario configuration**
-*** 1. Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
+* * *  1. Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
 * 1. Create an encrypted share “SMBEncrypted” for encryption feature
 * 1. Create a symbolic link ”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic”
 * 1. Create a sub folder “Sub” under basic share “SMBBasic“
