@@ -29,27 +29,27 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 1. Deploy the test scenario related environment configuration including:
 
 * **SMB2 scenario configuration**
-1. > SMB2 share “SMBBasic” was created for MS-SMB2 basic and MS-FSRVP test
-1. > Encrypted share “SMBEncrypted” created for encryption feature
-1. > A symbolic link”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic” was created.
-1. > A sub folder “Sub” under basic share “SMBBasic“ was created.
-1. > A symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic) was created.
-1. > A share “ShareForceLevel2” was created and was set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags.
-1. > A share  “SameWithSMBBasic” was created pointing to the same local path of basic share (e.g. SMBBasic)
-1. > A share “DifferentFromSMBBasic” was created pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
-1. > A share SMBReFSShare on ReFS volume was created.
-1. > 3  shadow copies on the volume were created which contains the share SMBBasic.
+1. > Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
+1. > Create an encrypted share “SMBEncrypted” for encryption feature
+1. > Create a symbolic link”Symboliclink” under basic share (e.g. SMBBasic)  which links to basic share “SMBBasic”
+1. > Create a sub folder “Sub” under basic share “SMBBasic“
+1. > Create a symbolic link “Symboliclink2” under sub folder ”SMBBasic\Sub“ which also links to the basic share (e.g. SMBBasic)
+1. > Create a share “ShareForceLevel2” and set SHI1005_FLAGS_FORCE_LEVELII_OPLOCK in SHI1005_flags
+1. > Create a share  “SameWithSMBBasic” pointing to the same local path of basic share (e.g. SMBBasic)
+1. > Create a share “DifferentFromSMBBasic” pointing to a different local path (e.g. C:\DifferentFromSMBBasic). 
+1. > Create a share SMBReFSShare on ReFS volume 
+1. > Create 3  shadow copies on the volume which contains the share SMBBasic.
 
 * **Auth scenario configuration**
-1. >** Share permission:**
+1. > ** Share permission:**
 A share named ”AzShare” was created with permission: 
-•	NTFS Permission:         Allow Everyone
-•	Share Permission: Allow Domain Admins
+* NTFS Permission:         Allow Everyone
+* Share Permission: Allow Domain Admins
 1. > **Folder Permission: **
-	A share named “AzFolder” was created with permission:
-•	NTFS Permission:         Allow Domain Admins
-•	Share Permission: Allow Everyone
-3.	File Permission:
+A share named “AzFolder” was created with permission:
+* NTFS Permission:         Allow Domain Admins
+* Share Permission: Allow Everyone
+1. > **File Permission:
 A share named “AzFile” was created with permission:
 •	NTFS Permission:         Allow Domain Admins
 •	Share Permission: Allow Everyone
