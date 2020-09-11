@@ -1,11 +1,17 @@
- # Table of Contents
-1. [Test Environment Architecture](#Test Environment Architecture)
-2. [Test Environment Configuration](#example2)
-2.1 [Config Domain Controller](#example2)
-2.2 [Config System Under Test](#example2)
-2.3 [Setup Driver Computer to Run Test Suite](#example2)
-2.3.1 [Setup a Linux Machine to run test suite](#third-example)
-2.3.2 [Setup a macOS /Windows machine with Docker image to run test suite](#fourth-examplehttpwwwfourthexamplecom)
+
+[Test Environment Architecture](#Test-Environment-Architecture)
+
+[Test Environment Configuration](#Test-Environment-Configuration)
+
+[Config Domain Controller](#Config-Domain-Controller)
+
+[Config System Under Test](#Config-System-Under-Test)
+
+[Setup Driver Computer to Run Test Suite](#Setup-Driver-Computer-to-Run-Test-Suite)
+
+[Setup a Linux Machine to run test suite](#Setup-a-Linux-Machine-to-run-test-suite)
+
+[Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
 # Test Environment Architecture
 The Test Environment consists of 8 Driver computers (client) and 8 SUT computers (server) hosted as Azure virtual machines in a Domain environment. Users will access the Domain via the remote desktop protocol (RDP) with a predefined administrator name and password. The basic network configuration is shown as follows:
@@ -315,7 +321,7 @@ For example, the command below will run the test cases with category traditional
  `-i testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
 
 
-### Setup a macOS/Windows machine with Docker image to run test suite
+### Setup a macOS or Windows machine with Docker image to run test suite
 
 1.	Install docker desktop version on your macOS or Windows machine
 2.	Pull image 
