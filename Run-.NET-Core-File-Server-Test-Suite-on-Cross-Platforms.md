@@ -49,15 +49,15 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
     *   Folder Permission:
           *  A share named “AzFolder” was created with permission:
               *   NTFS Permission:         Allow Domain Admins
-> > > * Share Permission: Allow Everyone
+              *   Share Permission: Allow Everyone
     *   File Permission:
-> > A share named “AzFile” was created with permission:
-> > > NTFS Permission:         Allow Domain Admins
-> > > Share Permission: Allow Everyone
+          *  A share named “AzFile” was created with permission:
+              *   NTFS Permission:         Allow Domain Admins
+              *   Share Permission: Allow Everyone
     *   Claim-Based Access Control (CBAC):
-> > A share named “AzCBAC” was created with permission:
-> > > NTFS Permission:      Allow Everyone
-> > > Share Permission: Allow Everyone
+          *  A share named “AzCBAC” was created with permission:
+              *   NTFS Permission:      Allow Everyone
+              *   Share Permission: Allow Everyone
 
 For all the shares created above, permissions were granted as following:
 > > Grant Full Control Permissions to admin account
