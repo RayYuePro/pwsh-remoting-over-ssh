@@ -94,15 +94,18 @@ There are 3 ways to setup a Linux machine to run test suite:
 1. Build and run test suite from the scratch.
 1. Run test suite in Docker image.
 
-Before run test suite, DNS resolution and .NET Core SDK is required to be configured properly on the Linux machine. 
+Before run test suite, DNS resolution and .NET Core SDK are required to be configured properly on the Linux machine. 
 * **Edit hosts file for DNS resolution**
 Edit /etc/hosts by command: 
+
 `sudo nano /etc/hosts`
 
 Append the domain controller IP address and domain name to the end of the file:
+
 `192.168.142.251        snia2020.org`
 
 Append the SUT IP address and FQDN name to the end of the file. For example, Meetup-Srv01 owns the IP of 192.168.142.12, the new line to be added will be:
+
 `192.168.142.12       meetup-srv01.snia2020.org`
 	
 You can adjust the IP address and host name with the SUT assigned to you. Exit and save the hosts file.
@@ -113,7 +116,7 @@ You can adjust the IP address and host name with the SUT assigned to you. Exit a
  
 `sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-3.1 `
 
-* **Run test suite with released binaries**
+#### Run test suite with released binaries**
  
 1.	Download test suite source released binaries from GitHub to /home/iolab
 
