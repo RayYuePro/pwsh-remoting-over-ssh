@@ -24,9 +24,9 @@ In the test environment, one domain controller is setup, with the configurations
 ## System Under Test
 Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configuration description.
 
-1. Join Meetup-srv01 into the Domain SNIA2020.org 
-1. Disable Firewall on the Meetup-SRV01
-1. Deploy the test scenario related environment configuration including:
+### 1. Join Meetup-srv01 into the Domain SNIA2020.org 
+### 1. Disable Firewall on the Meetup-SRV01
+### 1. Deploy the test scenario related environment configuration including:
 
 * **SMB2 scenario configuration**
 1. > Create SMB2 share “SMBBasic” for MS-SMB2 basic and MS-FSRVP test
