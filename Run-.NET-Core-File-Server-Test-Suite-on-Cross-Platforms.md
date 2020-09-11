@@ -11,20 +11,21 @@ Setup a macOS /Windows machine with Docker image to run test suite	11
 
  ![](‪C:\Users\vtian\Desktop\meetupenv.PNG)
 
-Meetup Test Environment Architecture
+# Test Environment Architecture
 The Test Environment consists of 8 Driver computers (client) and 8 SUT computers (server) hosted as Azure virtual machines in a Domain environment. Users will access the Domain via the remote desktop protocol (RDP) with a predefined administrator name and password. The basic network configuration is shown as follows:
 
+# Test Environment Configuration
 8 sets of Linux Driver + Windows SUT in domain environment with proper deployments were configured already. To get one set of environment, please check the session Reserve Meetup Test Environment. Once you reserve successfully, you are ready dial in the Meetup Environment via P2S VPN, and then follow the run test case on the Linux Driver computer directly. 
 
-In the Meetup environment, there’s already have one domain controller setup, with the configurations deployed on the domain controller. 
+In the test environment, one domain controller is setup, with the configurations deployed on the domain controller. 
 
-•	Domain name: sina2020.org
-•	Domain admin credential sina2020\administrator,  Password01!!
+* Domain name: eg. sina2020.org
+* Domain admin credential: eg. sina2020\administrator,  Password01!!
  
-The Windows SUTs have already configured with the below deployments. Take the SUT Meetup-SRV01 as example for the following description. 
-1.	Meetup-srv01 has joined into the Domain SNIA2020.org 
-2.	Firewall has been disabled.
-3.	Config the test scenario related environment including:
+The Windows SUTs have been configured with the below deployments. Take the SUT Meetup-SRV01 as example for the following description. 
+1.Join Meetup-srv01 into the Domain SNIA2020.org 
+1.Disable Firewall
+1.Config the test scenario related environment including:
 
 •	SMB2 scenario configuration
 1.	SMB2 share “SMBBasic” was created for MS-SMB2 basic and MS-FSRVP test
