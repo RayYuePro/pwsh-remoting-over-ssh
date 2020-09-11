@@ -16,7 +16,7 @@
 [Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
 # Test Environment Architecture
-The Test Environment consists of 8 Driver computers (client) and 8 SUT computers (server) hosted as Azure virtual machines in a Domain environment. Users will access the Domain via the remote desktop protocol (RDP) with a predefined administrator name and password. The basic network configuration is shown as follows:
+The Test Environment consists of a Domain Controller, Driver computer (client) and SUT computers (server) in a Domain environment. 
 
 # Test Environment Configuration
 ## Config Domain Controller
@@ -85,11 +85,6 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
     *   A folder ”ExistingFoler” was created  in the SMB2 share “FileShare”
     *   A mountpoint “mountpoint” was created in the share “FileShare” mounting to the volume
     *   A symbolic link file “link.txt” was created in the share “FileShare” linking to the file “ExistingFile.txt“
-
-With all the configurations, the final Meetup-Srv01 share folders like below:
-
- 
-
 
 ## Setup Driver Computer to Run Test Suite
 ### Setup a Linux Machine to run test suite
