@@ -41,25 +41,26 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 1. > Create 3  shadow copies on the volume which contains the share SMBBasic.
 
 * **Auth scenario configuration**
-** ** Share permission:**
-1. > A share named ”AzShare” was created with permission: 
-** NTFS Permission:         Allow Everyone
-** Share Permission: Allow Domain Admins
-1. > **Folder Permission: **
-A share named “AzFolder” was created with permission:
-* NTFS Permission:         Allow Domain Admins
-* Share Permission: Allow Everyone
-1. > **File Permission:
-A share named “AzFile” was created with permission:
-•	NTFS Permission:         Allow Domain Admins
-•	Share Permission: Allow Everyone
-4.	Claim-Based Access Control (CBAC):
-A share named “AzCBAC” was created with permission:
-•	NTFS Permission:      Allow Everyone
-•	Share Permission: Allow Everyone
+1. > Share permission:
+1. > >   A share named ”AzShare” was created with permission: 
+> > > ** NTFS Permission:         Allow Everyone
+> > > ** Share Permission: Allow Domain Admins
+1. > Folder Permission:
+> > A share named “AzFolder” was created with permission:
+> > > * NTFS Permission:         Allow Domain Admins
+> > > * Share Permission: Allow Everyone
+1. > File Permission:
+> > A share named “AzFile” was created with permission:
+> > > NTFS Permission:         Allow Domain Admins
+> > > Share Permission: Allow Everyone
+1. > Claim-Based Access Control (CBAC):
+> > A share named “AzCBAC” was created with permission:
+> > > NTFS Permission:      Allow Everyone
+> > > Share Permission: Allow Everyone
+
 For all the shares created above, permissions were granted as following:
-•	Grant Full Control Permissions to admin account
-•	Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
+> > Grant Full Control Permissions to admin account
+> > Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
 
 •	MS-DFSC scenario configuration
 1.	An SMB2 share for DFSC test “FileShare” was created
