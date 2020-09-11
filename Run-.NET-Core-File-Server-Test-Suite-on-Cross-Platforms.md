@@ -60,8 +60,8 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
               *   Share Permission: Allow Everyone
 
   For all the shares created above, permissions were granted as following:
- *  Grant Full Control Permissions to admin account
- *  Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
+     *  Grant Full Control Permissions to admin account
+     *  Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
 
 * **MS-DFSC scenario configuration**
     *   An SMB2 share for DFSC test “FileShare” was created
@@ -86,77 +86,57 @@ With all the configurations, the final Meetup-Srv01 share folders like below:
 
  
 
-If you want to setup your own driver computer and run test suite in Linux or macOS/Windows with Docker image, please check the section Setup Your Own Driver Computer to Run Test Suite for more details.
-Either, you can try to Run Test Suite on Pre-configured Linux Driver in the Meetup Environment, which is only for the IOLab event meetup purpose. After the IOlab, the environment will be not available any more. 
-Run Test Suite on Pre-configured Linux Driver 
-There 2 ways to run test cases on the pre-configured Linux Driver: dotnet command or PTMCli.
-1.	DOTNET test command
-The test suite released binaries have already been downloaded to the Linux Driver, under /home/iolab/FileServer.
-In the /home/iolab/FileServer folder, run test cases with commands below for different binaries.
 
-dotnet vstest MS-SMB2_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2TestResult.trx"
-
-dotnet vstest MS-SMB2Model_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2ModelTestResult.trx"
-
-dotnet vstest MS-FSA_ServerTestSuite.dll --logger:"trx;LogFileName=FSATestResult.trx"
-
-dotnet vstest MS-FSAModel_ServerTestSuite.dll --logger:"trx;LogFileName=FSAModelTestResult.trx"
-
-dotnet vstest Auth_ServerTestSuite.dll --logger:"trx;LogFileName=AuthServerTestResult.trx"
-
-2.	PTMCli:
-PTM cli now is a cross platform command line, which can run on Windows, Linux and macOS platforms.
-For more information about PTM Cli command parameters, please check the GitHub Wiki. 
-
-Setup Your Own Driver Computer to Run Test Suite
-Setup a Linux Machine to run test suite
+## Setup Your Own Driver Computer to Run Test Suite
+### Setup a Linux Machine to run test suite
 There are 3 ways to setup a Linux machine to run test suite:
-1.	Run test suite with released binaries. 
-2.	Build and run test suite from the scratch.
-3.	Run test suite in Docker image.
+1. Run test suite with released binaries. 
+1. Build and run test suite from the scratch.
+1. Run test suite in Docker image.
 
 Before run test suite, DNS resolution and .NET Core SDK is required to be configured properly on the Linux machine. 
-1.	Edit /etc/hosts by command: 
-sudo nano /etc/hosts
+* **Edit hosts file for DNS resolution**
+Edit /etc/hosts by command: 
+`sudo nano /etc/hosts`
 
 Append the domain controller IP address and domain name to the end of the file:
-192.168.142.251        snia2020.org
+`192.168.142.251        snia2020.org`
 
 Append the SUT IP address and FQDN name to the end of the file. For example, Meetup-Srv01 owns the IP of 192.168.142.12, the new line to be added will be:
-192.168.142.12       meetup-srv01.snia2020.org
+`192.168.142.12       meetup-srv01.snia2020.org`
 	
 You can adjust the IP address and host name with the SUT assigned to you. Exit and save the hosts file.
 
-2.	Install .NET Core SDK
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+* **Install .NET Core SDK**
+`wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb`
+`sudo dpkg -i packages-microsoft-prod.deb`
  
-sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-3.1 
+`sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-3.1 `
 
-Run test suite with released binaries
+* **Run test suite with released binaries**
  
 1.	Download test suite source released binaries from GitHub to /home/iolab
 
-wget https://github.com/microsoft/WindowsProtocolTestSuites/archive/3.20.1.0.zip -L -O testsuite.zip
+`wget https://github.com/microsoft/WindowsProtocolTestSuites/archive/3.20.1.0.zip -L -O testsuite.zip`
 
 2.	Unzip test suite binaries
-tar -C /home/iolab -zxvf /home/iolab/FileServer.tar.gz
+`tar -C /home/iolab -zxvf /home/iolab/FileServer.tar.gz`
 
 3.	Update the ptfconfig files
 
 Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deployment.ptfconfig. Update the ClientNic1IPAddress with the Linux Host IP (192.168.142.114 for example) . If you need to run Multiple Channel cases, add one more Nic to the Linux Host and update the value of one more node “ClientNic2IPAddress”  with the second Nic IP (192.168.142.115 for example).
 
- <Property name="ClientNic1IPAddress" value="192.168.142.114">
-    <Description>
-      One IP address or host name on local test drive computer to establish connections to SUT
-    </Description>
-  </Property>
-  <Property name="ClientNic2IPAddress" value="192.168.142.115">
-    <Description>
-      Another IP address or host name on local test drive computer to establish connections to SUT
-      If test drive computer only has one IP address, leave it blank
-    </Description>
-  </Property>
+ `<Property name="ClientNic1IPAddress" value="192.168.142.114">`
+    `<Description>`
+      `One IP address or host name on local test drive computer to establish connections to SUT`
+    `</Description>`
+  `</Property>`
+  `<Property name="ClientNic2IPAddress" value="192.168.142.115">`
+    `<Description>`
+      `Another IP address or host name on local test drive computer to establish connections to SUT`
+      `If test drive computer only has one IP address, leave it blank`
+    `</Description>`
+  `</Property>`
 
 4.	Run Testcase under /home/iolab/FileServer with the commands below for different binaries.
 
