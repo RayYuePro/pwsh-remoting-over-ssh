@@ -43,12 +43,12 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 
 * **Auth scenario configuration**
     *  Share permission:
-    *      *  A share named ”AzShare” was created with permission: 
-> > > ** NTFS Permission:         Allow Everyone
-> > > ** Share Permission: Allow Domain Admins
+          *  A share named ”AzShare” was created with permission: 
+              *   NTFS Permission:         Allow Everyone
+              *   Share Permission: Allow Domain Admins
     *   Folder Permission:
-> > A share named “AzFolder” was created with permission:
-> > > * NTFS Permission:         Allow Domain Admins
+          *  A share named “AzFolder” was created with permission:
+              *   NTFS Permission:         Allow Domain Admins
 > > > * Share Permission: Allow Everyone
     *   File Permission:
 > > A share named “AzFile” was created with permission:
