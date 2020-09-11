@@ -59,28 +59,28 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
               *   NTFS Permission:      Allow Everyone
               *   Share Permission: Allow Everyone
 
-For all the shares created above, permissions were granted as following:
-> > Grant Full Control Permissions to admin account
-> > Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
+  For all the shares created above, permissions were granted as following:
+ *  Grant Full Control Permissions to admin account
+ *  Grant Permissions without DELETE and GENERIC_ALL to nonadmin account
 
-•	MS-DFSC scenario configuration
-1.	An SMB2 share for DFSC test “FileShare” was created
-2.	DFS namespaces, two Stand-alone namespaces: SMBDfs and Standalone were created: Root share for SMBDfs: \\Meetup-SRV01\SMBDfs ,  Root share for Standalone: \\Meetup-SRV01\Standalone
-3.	Domain-based namespace DomainBased
-4.	One folder “SMBDfsLink” to 1st namespace (e.g. SMBDfs) and set link target to SMB2 share \\Meetup-SRV01\SMBBasic
-5.	Add two folders to 2nd namespace (e.g. Standalone)
-i.	One is DFSLink, link target is \\Meetup-SRV01\FileShare
-ii.	The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
-6.	Add two folders to Domain-based namespace (e.g. DomainBased)
-i.	One is DFSLink, link target is \\Meetup-SRV01\FileShare
-7.	The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
+* **MS-DFSC scenario configuration**
+    *   An SMB2 share for DFSC test “FileShare” was created
+    *   DFS namespaces, two Stand-alone namespaces: SMBDfs and Standalone were created: Root share for SMBDfs: \\Meetup-SRV01\SMBDfs ,  Root share for Standalone: \\Meetup-SRV01\Standalone
+    *   Domain-based namespace DomainBased
+    *   One folder “SMBDfsLink” to 1st namespace (e.g. SMBDfs) and set link target to SMB2 share \\Meetup-SRV01\SMBBasic
+    *   Add two folders to 2nd namespace (e.g. Standalone)
+        *   One is DFSLink, link target is \\Meetup-SRV01\FileShare
+        *   The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
+    *   Add two folders to Domain-based namespace (e.g. DomainBased)
+        *   One is DFSLink, link target is \\Meetup-SRV01\FileShare
+        *   The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
 
-•	MS-FSA scenario configuration
-1.	An SMB2 share FileShare was created.
-2.	A file in the SMB2 share “FileShare” was created with file name  “ExistingFile.txt”
-3.	A folder ”ExistingFoler” was created  in the SMB2 share “FileShare”
-4.	A mountpoint “mountpoint” was created in the share “FileShare” mounting to the volume
-5.	A symbolic link file “link.txt” was created in the share “FileShare” linking to the file “ExistingFile.txt“
+* **MS-FSA scenario configuration**
+    *   An SMB2 share FileShare was created.
+    *   A file in the SMB2 share “FileShare” was created with file name  “ExistingFile.txt”
+    *   A folder ”ExistingFoler” was created  in the SMB2 share “FileShare”
+    *   A mountpoint “mountpoint” was created in the share “FileShare” mounting to the volume
+    *   A symbolic link file “link.txt” was created in the share “FileShare” linking to the file “ExistingFile.txt“
 
 With all the configurations, the final Meetup-Srv01 share folders like below:
 
