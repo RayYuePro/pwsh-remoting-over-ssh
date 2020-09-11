@@ -9,7 +9,7 @@ Build and run test suite from the scratch	8
 Run test suite in Docker image on Linux computer	10
 Setup a macOS /Windows machine with Docker image to run test suite	11
 
- 
+ ![](‪C:\Users\vtian\Desktop\meetupenv.PNG)
 
 Meetup Test Environment Architecture
 The Test Environment consists of 8 Driver computers (client) and 8 SUT computers (server) hosted as Azure virtual machines in a Domain environment. Users will access the Domain via the remote desktop protocol (RDP) with a predefined administrator name and password. The basic network configuration is shown as follows:
