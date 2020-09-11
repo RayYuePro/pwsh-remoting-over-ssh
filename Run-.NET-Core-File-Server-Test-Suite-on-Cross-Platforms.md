@@ -65,15 +65,15 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 
 * **MS-DFSC scenario configuration**
     *   An SMB2 share for DFSC test “FileShare” was created
-    *   DFS namespaces, two Stand-alone namespaces: SMBDfs and Standalone were created: Root share for SMBDfs: \\Meetup-SRV01\SMBDfs ,  Root share for Standalone: \\Meetup-SRV01\Standalone
+    *   DFS namespaces, two Stand-alone namespaces: SMBDfs and Standalone were created: Root share for SMBDfs: \\\\Meetup-SRV01\SMBDfs ,  Root share for Standalone: \\\\Meetup-SRV01\Standalone
     *   Domain-based namespace DomainBased
     *   One folder “SMBDfsLink” to 1st namespace (e.g. SMBDfs) and set link target to SMB2 share \\Meetup-SRV01\SMBBasic
     *   Add two folders to 2nd namespace (e.g. Standalone)
-        *   One is DFSLink, link target is \\Meetup-SRV01\FileShare
-        *   The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
+        *   One is DFSLink, link target is \\\\Meetup-SRV01\FileShare
+        *   The other is Interlink, link target is \\\\Meetup-SRV01\SMBDfs\SMBDfsLink
     *   Add two folders to Domain-based namespace (e.g. DomainBased)
-        *   One is DFSLink, link target is \\Meetup-SRV01\FileShare
-        *   The other is Interlink, link target is \\Meetup-SRV01\SMBDfs\SMBDfsLink
+        *   One is DFSLink, link target is \\\\Meetup-SRV01\FileShare
+        *   The other is Interlink, link target is \\\\Meetup-SRV01\SMBDfs\SMBDfsLink
 
 * **MS-FSA scenario configuration**
     *   An SMB2 share FileShare was created.
@@ -95,7 +95,9 @@ There are 3 ways to setup a Linux machine to run test suite:
 1. Run test suite in Docker image.
 
 Before run test suite, DNS resolution and .NET Core SDK are required to be configured properly on the Linux machine. 
-* **Edit hosts file for DNS resolution**
+
+1. * **Edit hosts file for DNS resolution**
+
 Edit /etc/hosts by command: 
 
 `sudo nano /etc/hosts`
@@ -110,13 +112,13 @@ Append the SUT IP address and FQDN name to the end of the file. For example, Mee
 	
 You can adjust the IP address and host name with the SUT assigned to you. Exit and save the hosts file.
 
-* **Install .NET Core SDK**
+1. * **Install .NET Core SDK**
 `wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb`
 `sudo dpkg -i packages-microsoft-prod.deb`
  
 `sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-3.1 `
 
-#### Run test suite with released binaries**
+#### Run test suite with released binaries
  
 1.	Download test suite source released binaries from GitHub to /home/iolab
 
@@ -143,18 +145,18 @@ Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deplo
 
 4.	Run Testcase under /home/iolab/FileServer with the commands below for different binaries.
 
-dotnet vstest MS-SMB2_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2TestResult.trx"
+`dotnet vstest MS-SMB2_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2TestResult.trx"`
 
-dotnet vstest MS-SMB2Model_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2ModelTestResult.trx"
+`dotnet vstest MS-SMB2Model_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2ModelTestResult.trx"`
 
-dotnet vstest MS-FSA_ServerTestSuite.dll --logger:"trx;LogFileName=FSATestResult.trx"
+`dotnet vstest MS-FSA_ServerTestSuite.dll --logger:"trx;LogFileName=FSATestResult.trx"`
 
-dotnet vstest MS-FSAModel_ServerTestSuite.dll --logger:"trx;LogFileName=FSAModelTestResult.trx"
+`dotnet vstest MS-FSAModel_ServerTestSuite.dll --logger:"trx;LogFileName=FSAModelTestResult.trx"`
 
-dotnet vstest Auth_ServerTestSuite.dll --logger:"trx;LogFileName=AuthServerTestResult.trx"
+`dotnet vstest Auth_ServerTestSuite.dll --logger:"trx;LogFileName=AuthServerTestResult.trx"`
 
 
-Build and run test suite from the scratch
+#### Build and run test suite from the scratch
 
 1.	Clone source code from GitHub website https://github.com/microsoft/WindowsProtocolTestSuites  to /home/iolab/
 
