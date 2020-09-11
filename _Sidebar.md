@@ -1,0 +1,1 @@
+[Run .NET Core File Server Test Suite on Cross Platform](https://github.com/microsoft/WindowsProtocolTestSuites/wiki/Run-.NET-Core-Test-Suite-on-Cross-Platforms)
