@@ -96,7 +96,7 @@ There are 3 ways to setup a Linux machine to run test suite:
 
 Before run test suite, DNS resolution and .NET Core SDK are required to be configured properly on the Linux machine. 
 
-1. * **Edit hosts file for DNS resolution**
+1. **Edit hosts file for DNS resolution**
 
 Edit /etc/hosts by command: 
 
@@ -112,13 +112,13 @@ Append the SUT IP address and FQDN name to the end of the file. For example, Mee
 	
 You can adjust the IP address and host name with the SUT assigned to you. Exit and save the hosts file.
 
-1. * **Install .NET Core SDK**
+1. **Install .NET Core SDK**
 `wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb`
 `sudo dpkg -i packages-microsoft-prod.deb`
  
 `sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-3.1 `
 
-#### Run test suite with released binaries
+#### 1- Run test suite with released binaries
  
 1.	Download test suite source released binaries from GitHub to /home/iolab
 
@@ -132,16 +132,27 @@ You can adjust the IP address and host name with the SUT assigned to you. Exit a
 Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deployment.ptfconfig. Update the ClientNic1IPAddress with the Linux Host IP (192.168.142.114 for example) . If you need to run Multiple Channel cases, add one more Nic to the Linux Host and update the value of one more node “ClientNic2IPAddress”  with the second Nic IP (192.168.142.115 for example).
 
  `<Property name="ClientNic1IPAddress" value="192.168.142.114">`
+
     `<Description>`
+
       `One IP address or host name on local test drive computer to establish connections to SUT`
+
     `</Description>`
+
   `</Property>`
+
   `<Property name="ClientNic2IPAddress" value="192.168.142.115">`
+
     `<Description>`
+
       `Another IP address or host name on local test drive computer to establish connections to SUT`
+
       `If test drive computer only has one IP address, leave it blank`
+
     `</Description>`
+
   `</Property>`
+
 
 4.	Run Testcase under /home/iolab/FileServer with the commands below for different binaries.
 
@@ -156,7 +167,7 @@ Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deplo
 `dotnet vstest Auth_ServerTestSuite.dll --logger:"trx;LogFileName=AuthServerTestResult.trx"`
 
 
-#### Build and run test suite from the scratch
+#### 2- Build and run test suite from the scratch
 
 1.	Clone source code from GitHub website https://github.com/microsoft/WindowsProtocolTestSuites  to /home/iolab/
 
