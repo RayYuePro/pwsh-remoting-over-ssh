@@ -13,6 +13,10 @@
 
 [Setup a Linux Machine to run test suite](#Setup-a-Linux-Machine-to-run-test-suite)
 
+1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
+1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
+1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image)
+
 [Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
 # Test Environment Architecture
@@ -89,9 +93,10 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
 ## Setup Driver Computer to Run Test Suite
 ### Setup a Linux Machine to run test suite
 There are 3 ways to setup a Linux machine to run test suite:
-1. Run test suite with released binaries. 
-1. Build and run test suite from the scratch.
-1. Run test suite in Docker image.
+
+1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
+1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
+1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image)
 
 Before run test suite, DNS resolution and .NET Core SDK are required to be configured properly on the Linux machine. 
 
@@ -168,7 +173,7 @@ Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deplo
    `dotnet vstest Auth_ServerTestSuite.dll --logger:"trx;LogFileName=AuthServerTestResult.trx"`
 
 
-#### 2- Build and run test suite from the scratch
+#### 2- Build and run test suite from scratch
 You can also clone the source code and build by yourself. Here are the steps to follow:
 1.	Clone source code from GitHub website https://github.com/microsoft/WindowsProtocolTestSuites to local driver, eg. /home/iolab/
 
