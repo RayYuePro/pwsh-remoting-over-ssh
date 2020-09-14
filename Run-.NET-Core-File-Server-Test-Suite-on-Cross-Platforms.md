@@ -15,7 +15,7 @@
 
 1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
 1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
-1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image)
+1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image-on-Linux-computer)
 
 [Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
@@ -96,7 +96,7 @@ There are 3 ways to setup a Linux machine to run test suite:
 
 1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
 1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
-1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image)
+1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image-on-Linux-computer)
 
 Before run test suite, DNS resolution and .NET Core SDK are required to be configured properly on the Linux machine. 
 
