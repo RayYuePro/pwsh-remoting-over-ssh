@@ -12,8 +12,6 @@
 [Setup Driver Computer to Run Test Suite](#Setup-Driver-Computer-to-Run-Test-Suite)
 
 [Setup a Linux Machine to run test suite](#Setup-a-Linux-Machine-to-run-test-suite)
-[Run test suite with released binaries](#1--Run-test-suite-with-released-binaries)
-
 
 [Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
