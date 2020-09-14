@@ -253,74 +253,84 @@ For example, you can run below command if you want to list test cases with test 
 `RunTestCasesByFilter.sh "TestCategory=BVT&TestCategory=SMB311" "list"`
 
 #### 3- Run test suite in Docker image on Linux computer
-1.	Pull Docker image from Docker Hub
+1. Install Docker
 
-`docker pull mcr.microsoft.com/windowsprotocoltestsuites`
+    `sudo snap install docker`
 
-2.	Download ptfconfig file from GitHub
-Download the ptfconfig file from the GitHub link: https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar  
-Unzip it to the local path of Linux host machine (/data/fileserver for example) before ahead. 
+1. Pull Docker image from Docker Hub
 
-3.	Update the ptfconfig files
+    `docker pull mcr.microsoft.com/windowsprotocoltestsuites`
 
-Located at CommonTestSuite.deployment.ptfconfig. Update the ClientNic1IPAddress with the Linux Host IP (192.168.142.114 for example) . If you need to run Multiple Channel cases, add one more Nic to the Linux Host and update the value of one more node “ClientNic2IPAddress”  with the second Nic IP (192.168.142.115 for example).
+1. Download ptfconfig file from GitHub
+    Download the ptfconfig file from the GitHub link: 
+    https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar  
+    Unzip it to the local path of Linux host machine (/data/fileserver for example) before ahead. 
 
- <Property name="ClientNic1IPAddress" value="192.168.142.114">
+1. Update the ptfconfig files
 
-    <Description>
+    Located at CommonTestSuite.deployment.ptfconfig. Update the ClientNic1IPAddress with the Linux Host IP (192.168.142.114 for example) . If 
+    you need to run Multiple Channel cases, add one more Nic to the Linux Host and update the value of one more node “ClientNic2IPAddress”  
+    with the second Nic IP (192.168.142.115 for example).
 
-      One IP address or host name on local test drive computer to establish connections to SUT
+     <Property name="ClientNic1IPAddress" value="192.168.142.114">
 
-    </Description>
+        <Description>
 
-  </Property>
+          One IP address or host name on local test drive computer to establish connections to SUT
 
-  <Property name="ClientNic2IPAddress" value="192.168.142.115">
+        </Description>
 
-    <Description>
+      </Property>
 
-      Another IP address or host name on local test drive computer to establish connections to SUT
+      <Property name="ClientNic2IPAddress" value="192.168.142.115">
 
-      If test drive computer only has one IP address, leave it blank
+        <Description>
 
-    </Description>
+          Another IP address or host name on local test drive computer to establish connections to SUT
 
-  </Property>
+          If test drive computer only has one IP address, leave it blank
 
+        </Description>
 
-4.	Mount the folder (/data/fileserver) with ptfconfig files included and pre-configured:
-5.	Run the Windows protocol test suites image for FileServer with parameters:
+      </Property>
 
-`docker run \`
+1. Mount the folder (/data/fileserver) with ptfconfig files included and pre-configured:
+1. Run the Windows protocol test suites image for FileServer with parameters:
 
-  `--hostname <hostname> \`
+    `docker run \`
 
-  `--network host \`
+      `--hostname <hostname> \`
 
-  `-v /path/of/ptfconfig:/data/fileserver \`
+      `--network host \`
 
-  `-i windowsprotocoltestsuites:fileserver \`
+      `-v /path/of/ptfconfig:/data/fileserver \`
 
-  `[optional]$filter \`
+      `-i windowsprotocoltestsuites:fileserver \`
 
-  `[optional]$dryRun`
+      `[optional]$filter \`
 
-* 	--hostname: Required. The host name of the running container, for example: Linux-Client
-* 	--network: Required. The network the running container will use, using host as default. While using host, please make sure that the connection between the host which the container is runnning and the server is valid.
-* 	-v: Required. The /path/of/ptfconfig should include all the ptfconfig files with pre-configured, and mount this path to the fixed path /data/fileserver in the container
-* 	-i: Required. The image name, for example: windowsprotocoltestsuites:fileserver
-* 	$filter: Optional. The expression used to filter test cases. For example, "TestCategory=BVT&TestCategory=SMB311" will filter out test cases with test category BVT and SMB311.
-* 	$dryRun: Optional. If set as "y", just list all the test cases match the filter string instead of running them. If it's null or empty, the filtered test cases will be executed directly
+      `[optional]$dryRun`
 
-For example, the command below will run the test cases with category traditional FSA categories.
+    * 	--hostname: Required. The host name of the running container, for example: Linux-Client
+    * 	--network: Required. The network the running container will use, using host as default. While using host, please make sure that the 
+    connection between the host which the container is runnning and the server is valid.
+    * 	-v: Required. The /path/of/ptfconfig should include all the ptfconfig files with pre-configured, and mount this path to the fixed path 
+    /data/fileserver in the container
+    * 	-i: Required. The image name, for example: windowsprotocoltestsuites:fileserver
+    * 	$filter: Optional. The expression used to filter test cases. For example, "TestCategory=BVT&TestCategory=SMB311" will filter out test 
+    cases with test category BVT and SMB311.
+    * 	$dryRun: Optional. If set as "y", just list all the test cases match the filter string instead of running them. If it's null or empty, 
+    the filtered test cases will be executed directly
 
-`docker run `
+    For example, the command below will run the test cases with category traditional FSA categories.
 
-`--network host`
+    `docker run `
 
-`-v /Users/microsoft/Desktop/config/ptfconfig:/data/fileserver`
+    `--network host`
 
- `-i testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
+    `-v /Users/microsoft/Desktop/config/ptfconfig:/data/fileserver`
+
+     `-i testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
 
 
 ### Setup a macOS or Windows machine with Docker image to run test suite
