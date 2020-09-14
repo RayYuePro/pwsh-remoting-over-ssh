@@ -77,3 +77,16 @@ In `config` folder, you can edit `playlist.xml` to update playlist and edit `pro
 And all `ptfconfig` file used by test suites are located in `ptfconfig` folder, you can change them accordingly.
 
 When you are ready, zip the folder and modify the extension to `.ptm`. You can use the new test profile to run test suites using the new configuration.
+
+## Support multi-instance
+
+PTMCli supports multi-instance, meaning that you can run multiple PTMCli at the same time.
+
+For example, open two Console windows on Windows OS, and execute the commands below in each window.
+
+```
+dotnet PTMCli.dll -p C:\test1.ptm -t C:\FileServer-TestSuite-ServerEP
+dotnet PTMCli.dll -p C:\test2.ptm -t C:\FileServer-TestSuite-ServerEP
+```
+
+You will get two results under `C:\FileServer-TestSuite-ServerEP\HtmlTestResults\`.
