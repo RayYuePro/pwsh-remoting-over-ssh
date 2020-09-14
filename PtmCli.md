@@ -1,11 +1,16 @@
-Protocol Test Manager has a command line interface for you to use in automation.
+Protocol Test Manager has a command line interface **PTMCli** for you to use in automation.
 
-`PtmCli.exe` is located in `bin` folder under installation path. By default, it is `C:\Program Files\Protocol Test Manager\bin\PtmCli.exe`.
+It can be run on multiple operating systems: Windows, Linux and macOS.
+
+Download PTMCli.zip/PTMCli.tar.gz and then extract it to your specified folder.
+PTMCli.dll is inside the package.
 
 ## Syntax
 
 ```
-PtmCli.exe <-p|--profile profileName>
+cd <the folder that contains the extracted files>
+dotnet PTMCli.dll <-p|--profile profilePath>
+           <-t|--testsuite testsuitePath>
            [-s|--selected] [--categories categories]
            [-r|--report reportFile] [--outcome pass,fail,inconclusive]
            [-f|--format format]
@@ -13,11 +18,15 @@ PtmCli.exe <-p|--profile profileName>
 
 ## Parameters
 
-### -p|--profile profileName
+### -p|--profile profilePath
 
 Specifies the path of the test profile to run.
 
 To get a valid profile. You need to export one from PTM GUI. See [Export Test Profile](#export-test-profile) section.
+
+### -t|--testsuite testsuitePath
+
+Specifies the path of the test suite to run.
 
 ### -s|--selected
 
