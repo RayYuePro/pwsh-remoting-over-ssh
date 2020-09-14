@@ -1,3 +1,10 @@
+# Prerequisites
+
+You need to install docker on your platform, go to the [Get Docker][] for help.
+
+[Get Docker]: https://docs.docker.com/get-docker/
+
+
 # Featured Tags
 
 - `fileserver`: The fileserver test suite image.
@@ -11,7 +18,7 @@ If you are new to Windows Protocol Test Suites and want to learn more, go to the
 
 [windows protocol test suites]: https://github.com/microsoft/WindowsProtocolTestSuites
 
-# How to Use this Image
+# How to Run this Image
 
 To run this image, you need to mount a folder with [ptfconfig][] files included and pre-configured:
 
@@ -37,10 +44,6 @@ docker run \
 ```
 
 When the test suites run finished, the result file with trx format will be generated under the location /path/of/ptfconfig
-
-# Full Tag Listing
-
-Only `fileserver` tag is supported for now.
 
 # Feedback
 
