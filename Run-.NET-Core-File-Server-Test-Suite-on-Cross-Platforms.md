@@ -253,13 +253,14 @@ For example, you can run below command if you want to list test cases with test 
 `RunTestCasesByFilter.sh "TestCategory=BVT&TestCategory=SMB311" "list"`
 
 #### 3- Run test suite in Docker image on Linux computer
+Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Test-Suites-with-Docker for more details
 1. Install Docker
 
     `sudo snap install docker`
 
 1. Pull Docker image from Docker Hub
 
-    `docker pull mcr.microsoft.com/windowsprotocoltestsuites`
+    `docker pull mcr.microsoft.com/windowsprotocoltestsuites:fileserver`
 
 1. Download ptfconfig file from GitHub
     Download the ptfconfig file from the GitHub link: 
