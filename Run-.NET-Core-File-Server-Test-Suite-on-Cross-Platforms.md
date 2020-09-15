@@ -106,7 +106,11 @@ https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/TestSuites/File
 
 ### Setup a Windows Machine to run test suite with PTM
 
-On a Wyou can rely on the Protocol Test Manager to run test suite. More details about how to run test suite with PTM, please check the File Server SMB2 Test Suite Lab Tutorial: https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/Doc/File%20Server%20SMB2%20Test%20Suite%20Lab%20Tutorial_v2.pdf
+On a Windows machine, install the dependent software following: https://github.com/microsoft/WindowsProtocolTestSuites#prerequisites
+
+Then install the latest released File Server test suite by downloading and extracting the zip file https://github.com/microsoft/WindowsProtocolTestSuites/releases to local drive.
+
+You can use the Protocol Test Manager to run test suite. More details about how to run test suite with PTM, please check the File Server SMB2 Test Suite Lab Tutorial: https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/Doc/File%20Server%20SMB2%20Test%20Suite%20Lab%20Tutorial_v2.pdf
 
 
 ### Setup a Linux Machine to run test suite
