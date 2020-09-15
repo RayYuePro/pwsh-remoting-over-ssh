@@ -11,13 +11,15 @@
 
 [Setup Driver Computer to Run Test Suite](#Setup-Driver-Computer-to-Run-Test-Suite)
 
-[Setup a Linux Machine to run test suite](#Setup-a-Linux-Machine-to-run-test-suite)
+1. [Setup a Windows Machine to run test suite with PTM](#Setup-a-Windows-Machine-to-run-test-suite-with-ptm)
 
-1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
-1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
-1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image-on-Linux-computer)
+1. [Setup a Linux Machine to run test suite](#Setup-a-Linux-Machine-to-run-test-suite)
 
-[Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
+    1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
+    1. [Build and run test suite from scratch](#2--Build-and-run-test-suite-from-scratch)
+    1. [Run test suite in Docker image](#3--Run-test-suite-in-Docker-image-on-Linux-computer)
+
+1. [Setup a macOS or Windows machine with Docker image to run test suite](#Setup-a-macOS-or-Windows-machine-with-Docker-image-to-run-test-suite)
 
 # Test Environment Architecture
 The Test Environment consists of a Domain Controller, Driver computer (client) and SUT computers (server) in a Domain environment. 
@@ -91,7 +93,24 @@ Take a Windows SUT (computer name eg. Meetup-SRV01) as example for the configura
     *   A symbolic link file “link.txt” was created in the share “FileShare” linking to the file “ExistingFile.txt“
 
 ## Setup Driver Computer to Run Test Suite
+Before config the driver computer and run test suite, please config and check the driver computer as below:
+
+* First, check the minimum requirement of a Driver computer:
+https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/TestSuites/FileServer/docs/FileServerUserGuide.md#3.3.1
+
+* Then, verify Network Computer Connectivity:
+https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/TestSuites/FileServer/docs/FileServerUserGuide.md#4.3
+
+* Next, join the driver computer into a domain environment if you want to use a domain credential for testing:
+https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/TestSuites/FileServer/docs/FileServerUserGuide.md#-522-set-up-the-driver-computer-for-the-domain-environment
+
+### Setup a Windows Machine to run test suite with PTM
+
+On a Wyou can rely on the Protocol Test Manager to run test suite. More details about how to run test suite with PTM, please check the File Server SMB2 Test Suite Lab Tutorial: https://github.com/microsoft/WindowsProtocolTestSuites/blob/main/Doc/File%20Server%20SMB2%20Test%20Suite%20Lab%20Tutorial_v2.pdf
+
+
 ### Setup a Linux Machine to run test suite
+
 There are 3 ways to setup a Linux machine to run test suite:
 
 1. [Run test suite with released binaries](#1--run-test-suite-with-released-binaries) 
