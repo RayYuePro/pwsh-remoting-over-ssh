@@ -14,6 +14,8 @@ dotnet PTMCli.dll <-p|--profile profilePath>
            [-s|--selected] [--categories categories]
            [-r|--report reportFile] [--outcome pass,fail,inconclusive]
            [-f|--format format]
+           [--help]
+           [--version]
 ```
 
 ## Parameters
@@ -42,6 +44,14 @@ Value should be separated by comma or space.
 
 Specifies the result file which will be written to. If not specified, test results will be written to stdout.
 
+### -f|--format format
+
+Specifies the report format.
+
+Valid values are: `plain`, `json`, `xunit`.
+
+Default value is `plain`.
+
 ### --outcome outcome
 
 Specifies the outcome of the test cases to be included in the report file.
@@ -52,13 +62,13 @@ Valid values are: `pass`, `fail`, `inconclusive`.
 
 Default value is `pass,fail,inconclusive`.
 
-### -f|--format format
+### --help
 
-Specifies the report format.
+Display the help info.
 
-Valid values are: `plain`, `json`, `xunit`.
+### --version
 
-Default value is `plain`.
+Display the version info of PTMCli.
 
 ## Export Test Profile
 
