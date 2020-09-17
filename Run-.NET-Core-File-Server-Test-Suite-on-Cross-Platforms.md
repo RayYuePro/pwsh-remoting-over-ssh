@@ -283,11 +283,11 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 
 1. Pull Docker image from Docker Hub
 
-    `docker pull mcr.microsoft.com/windowsprotocoltestsuites:fileserver`
+    `sudo docker pull mcr.microsoft.com/windowsprotocoltestsuites:fileserver`
 
 1. Download ptfconfig file from GitHub
     Download the ptfconfig file from the GitHub link: 
-    https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar  
+    https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar.gz
     Unzip it to the local path of Linux host machine (/data/fileserver for example) before ahead. 
 
 1. Update the ptfconfig files
