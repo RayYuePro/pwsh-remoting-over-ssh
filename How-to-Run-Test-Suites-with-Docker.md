@@ -22,7 +22,7 @@ If you are new to Windows Protocol Test Suites and want to learn more, go to the
 
 To run this image, you need to mount a folder with [ptfconfig][] files included and pre-configured:
 
-[ptfconfig]: https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar
+[ptfconfig]: https://github.com/microsoft/WindowsProtocolTestSuites/releases/download/4.20.9.0/fileserver-docker-ptfconfig.tar.gz
 
 - `--hostname`: Required. The host name of the running container, for example: FS-CLI
 - `--network`: Required. The network the running container will use, using host as default. While using host, please make sure that the connection between the host which the container is runnning and the server is valid.
