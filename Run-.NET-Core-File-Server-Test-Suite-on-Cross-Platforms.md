@@ -318,7 +318,6 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 
       </Property>
 
-1. Mount the folder (/data/fileserver) with ptfconfig files included and pre-configured:
 1. Run the Windows protocol test suites image for FileServer with parameters:
 
     `docker run \`
