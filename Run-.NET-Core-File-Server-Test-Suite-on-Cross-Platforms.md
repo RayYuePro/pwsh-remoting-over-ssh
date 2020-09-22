@@ -183,7 +183,7 @@ Located at the local config path at /home/iolab/FileServer/CommonTestSuite.deplo
   </Property>
 
 
-4.	Run Testcase under /home/iolab/FileServer with the commands below for different binaries.
+4.	Run Testcase under /home/iolab/FileServer/Bin with the commands below for different binaries.
 
    `dotnet vstest MS-SMB2_ServerTestSuite.dll --logger:"trx;LogFileName=SMB2TestResult.trx"`
 
@@ -242,7 +242,7 @@ If you need to run Multiple Channel cases, add one more Nic to the Linux Host an
 
 During the build, PTF will be downloaded from NuGet website side-by-side. 
 
-After the build succeeds, the common folder structure should be generated in the folder `/home/iolab/WindowsProtocolTestSuites /drop/TestSuites/FileServer`.
+After the build succeeds, the common folder structure should be generated in the folder `/home/iolab/WindowsProtocolTestSuites/drop/TestSuites/FileServer`.
 
 *     Bin: all the built binaries including ProtoSDK, adapters and test suites.
 *     Batch: batch files (.ps1, .sh) which can be used to launch tests.
