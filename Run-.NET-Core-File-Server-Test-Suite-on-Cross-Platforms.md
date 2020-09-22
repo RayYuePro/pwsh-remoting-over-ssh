@@ -339,7 +339,7 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
     connection between the host which the container is runnning and the server is valid.
     * 	-v: Required. The /path/of/ptfconfig should include all the ptfconfig files with pre-configured, and mount this path to the fixed path 
     /data/fileserver in the container
-    * 	-i: Required. The image name, for example: windowsprotocoltestsuites:fileserver
+    * 	-i: Required. The image name, for example: mcr.microsoft.com/windowsprotocoltestsuites:fileserver
     * 	$filter: Optional. The expression used to filter test cases. For example, "TestCategory=BVT&TestCategory=SMB311" will filter out test 
     cases with test category BVT and SMB311.
     * 	$dryRun: Optional. If set as "y", just list all the test cases match the filter string instead of running them. If it's null or empty, 
@@ -353,7 +353,7 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 
     `-v /Users/microsoft/Desktop/config/ptfconfig:/data/fileserver`
 
-     `-i mcr.microsoft.com/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
+     `-i mcr.microsoft.com/windowsprotocoltestsuites:fileserver "TestCategory=Auth"`
 
 
 ### Setup a macOS or Windows machine with Docker image to run test suite
@@ -361,7 +361,7 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 1.	Install docker desktop version on your macOS or Windows machine
 2.	Pull image 
 
-`docker pull testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver`
+`docker pull mcr.microsoft.com/windowsprotocoltestsuites:fileserver`
 
 3.	Create bridge to let host can communicate with container image 
 
@@ -447,9 +447,9 @@ The container fsdocker will be connected to the bridge inter2 and will be assign
 
  `-v /Users/microsoft/Desktop/config/ptfconfig:/data/fileserver `
 
-`-it testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver `
+`-it mcr.microsoft.com/windowsprotocoltestsuites:fileserver `
 
-`"TestCategory=Model&TestCategory!=Fsa" `
+`"TestCategory=Auth" `
 
 You will see output flows out to the host console, and the test result of the test cases filtered by the filter TestCategory=BVT&TestCategory=SMB311 will be found in your local config path when the execution is complete.
 
