@@ -38,7 +38,7 @@ docker run \
   --hostname <hostname> \
   --network host \
   -v /path/of/ptfconfig:/data/fileserver \
-  -i windowsprotocoltestsuites:fileserver \
+  -i mcr.microsoft.com/windowsprotocoltestsuites:fileserver \
   [optional]$filter \
   [optional]$dryRun
 ```
