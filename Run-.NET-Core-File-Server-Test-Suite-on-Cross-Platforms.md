@@ -328,7 +328,7 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 
       `-v /path/of/ptfconfig:/data/fileserver \`
 
-      `-i windowsprotocoltestsuites:fileserver \`
+      `-i mcr.microsoft.com/windowsprotocoltestsuites:fileserver\`
 
       `[optional]$filter \`
 
@@ -353,7 +353,7 @@ Refer https://github.com/microsoft/WindowsProtocolTestSuites/wiki/How-to-Run-Tes
 
     `-v /Users/microsoft/Desktop/config/ptfconfig:/data/fileserver`
 
-     `-i testsuiteimage.azurecr.io/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
+     `-i mcr.microsoft.com/windowsprotocoltestsuites:fileserver "TestCategory=Traditional&TestCategory=Fsa"`
 
 
 ### Setup a macOS or Windows machine with Docker image to run test suite
