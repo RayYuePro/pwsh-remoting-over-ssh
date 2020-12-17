@@ -29,6 +29,7 @@ Refer to [Prerequisites](https://github.com/microsoft/WindowsProtocolTestSuites#
 The graph below shows the testing environment used in this guide.
 
 ![Testing environment for Linux driver](./images/pwsh-over-ssh-win-env.png)
+
 ![Testing environment for Windows driver](./images/pwsh-over-ssh-linux-env.png)
 
 `SUT` is the machine to be tested against the test suite, and it acts as SSH server and supports PowerShell remoting.
