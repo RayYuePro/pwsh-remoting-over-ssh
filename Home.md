@@ -1,6 +1,6 @@
 # Overview
 
-[Introduction to Windows Protocol Test Suites](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/README.md)
+[Introduction to Windows Protocol Test Suites] (https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/README.md)
 
 [How to Contribute](https://github.com/Microsoft/WindowsProtocolTestSuites/blob/master/CONTRIBUTING.md)
 
