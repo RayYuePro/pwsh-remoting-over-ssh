@@ -32,17 +32,16 @@ The graph below shows the testing environment used in this guide.
 
 `SUT` is the machine to be tested against the test suite, and it acts as SSH server and supports PowerShell remoting.
 
-The test suite runs on the Linux machine `LinuxDriver` and the Windows driver machine `WinDriver`, and the driver acts as SSH client, and the driver and SUT user we use in this guide called `prototest`.
+The test suite runs on the Linux machine `LinuxDriver` or the Windows driver machine `WinDriver`, and the driver acts as SSH client, and the driver and SUT user we use in this guide called `prototest`.
 
 **Note:**
 
 1. For the driver and SUT user `prototest`, you can use different username for LinuxDriver,WinDriver and SUT, just make sure the SUT user's authorized_keys file under `.ssh` home directory is copied from your LinuxDriver or WinDriver user's id_rsa.pub under `.ssh` home directory.
+The 'authorized_keys' file and SSH keys are the keys which you will use in [Setup SSH keys on driver machine](#setup-ssh-keys-on-driver-machine), and they are required for SSH authentication and authorization.
 
 2. If you have many id_rsa.pub from multiple machines or users, you can just append authorized_keys file in point 1.
 
-3. If you have exist user for LinuxDriver,WinDriver or SUT, you can just use it and make sure you apply point 1.
-
-4. If you want to use different users to run test suites on LinuxDriver or WinDriver, you can just run it and make sure you apply point 1.
+3. If you have exist users for LinuxDriver,WinDriver or SUT, you can just use them and make sure you apply point 1.
 
 ## Setup PowerShell Core
 
