@@ -16,7 +16,7 @@
 
 ## Overview
 
-.NET Core version of Windows Protocol Test Suites currently can run on Windows and Linux, and we publish [.NET Core FileServer TestSuite](./Run-.NET-Core-File-Server-Test-Suite-on-Cross-Platforms.md) at present.
+.NET Core version of Windows Protocol Test Suites currently can run on Windows and Linux, and we publish [.NET Core FileServer TestSuite](./Run-.NET-Core-File-Server-Test-Suite-on-Cross-Platforms.md),[.NET Core RDPClient TestSuite](./Run-.NET-Core-RDP-Client-Test-Suite-on-Cross-Platforms.md) and [.NET Core RDPServer TestSuite](./Run-.NET-Core-RDP-Server-Test-Suite-on-Cross-Platforms.md) at present.
 
 This guide will show you how to enable [PowerShell Core remoting over SSH](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.1).
 
@@ -33,6 +33,16 @@ The graph below shows the testing environment used in this guide.
 `SUT` is the machine to be tested against the test suite, and it acts as SSH server and supports PowerShell remoting.
 
 The test suite runs on the Linux machine `LinuxDriver` and the Windows driver machine `WinDriver`, and the driver acts as SSH client, and the driver and SUT user we use in this guide called `prototest`.
+
+**Note:**
+
+1. For the driver and SUT user `prototest`, you can use different username for LinuxDriver,WinDriver and SUT, just make sure the SUT user's authorized_keys file under `.ssh` home directory is copied from your LinuxDriver or WinDriver user's id_rsa.pub under `.ssh` home directory.
+
+2. If you have many id_rsa.pub from multiple machines or users, you can just append authorized_keys file in point 1.
+
+3. If you have exist user for LinuxDriver,WinDriver or SUT, you can just use it and make sure you apply point 1.
+
+4. If you want to use different users to run test suites on LinuxDriver or WinDriver, you can just run it and make sure you apply point 1.
 
 ## Setup PowerShell Core
 
